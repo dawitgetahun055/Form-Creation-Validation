@@ -10,16 +10,16 @@ addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password").value.trim();
 
     let isValid = true;
-    let message = [];
+    let messages = [];
 
     if (username.length < 3) {
       isValid = false;
-      message.push("Username must be atleast 3 characters long.");
+      messages.push("Username must be atleast 3 characters long.");
     }
 
     if (!(email.includes("@") && email.includes("."))) {
       isValid = false;
-      message.push('Email must include both "@" and "." characters.');
+      messages.push('Email must include both "@" and "." characters.');
     }
 
     if (password.length < 8) {
@@ -31,7 +31,7 @@ addEventListener("DOMContentLoaded", function () {
       feedbackDiv.textContent = "Registration Successfull!";
       feedbackDiv.style.color = "#28a745";
     } else {
-      feedbackDiv.innerHTML = message.join("<br>");
+      feedbackDiv.innerHTML = messages.join("<br>");
       feedbackDiv.style.color = "#dc3545";
     }
   });

@@ -1,3 +1,5 @@
+addEventListener("DOMContentLoaded", fetchUserData);
+
 async function fetchUserData() {
   const apiUrl = "https://jsonplaceholder.typicode.com/users";
   const dataContainer = document.getElementById("api-data");
@@ -19,5 +21,3 @@ async function fetchUserData() {
     dataContainer.innerHTML = "Failed to load user data.";
   }
 }
-
-addEventListener("DOMContentLoaded", fetchUserData);
